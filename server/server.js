@@ -28,6 +28,8 @@ const startApolloServer = async (typeDefs, resolvers) => {
   // if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../client/build")));
   // }
+  //change to force heroku to take
+  
 
   app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
